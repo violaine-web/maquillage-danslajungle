@@ -1,6 +1,6 @@
 <section id="ghTree" class="ghTree" data-title="tree">
   <header>
-    <h1>{{ page.collection | capitalize }}</h1>
+    <h1>commune de {{ page.collection | capitalize }}</h1>
   </header>
   {% for lieu in site[page.collection] %} {% unless lieu.url contains
   "index.html" %}
@@ -11,13 +11,8 @@
       </a>
     </h2>
     <p class="ghTreeExcerpt" data-title="fileExcerpt">{{ lieu.description }}</p>
-    <a
-      class="ghTreeReadmore"
-      title="Lire la suite de la fiche : {{ lieu.nom }}"
-      data-title="fileReadmoreLink"
-      href="{{ lieu.url }}"
-      >Lire la suite de la fiche</a
-    >
+    <a class="ghTreeReadmore" title="Lire la suite de la fiche : {{ lieu.nom }}" data-title="fileReadmoreLink"
+      href="{{ lieu.url }}">Lire la suite de la fiche</a>
   </article>
   {% endunless %} {% endfor %}
 </section>
