@@ -1,6 +1,6 @@
 <div class=metas>
     <ul>
-        {% if  page.type %}
+        {% if page.type %}
         <li>
             {% for type in page.type %}
             {% if type == "pub" or type == "bar" %}
@@ -62,7 +62,7 @@
             {% endfor %}
         </li>
         {% endif %}
-        {% if  page.par %}
+        {% if page.par %}
         <li>Par : <a href="https://github.com/{{ page.par }}">{{ page.par }}</a></li>
         {% endif %}
         {% if page.adresse %}
@@ -75,20 +75,17 @@
                     {{ page.adresse }}</a>
         </li>
         {% endif %}
-        {% if  page.email or page.tel %}
-        <li>Contact : {{ page.email }} {% if  page.email and page.tel %} - {% endif %}{{ page.tel }}</li>
+        {% if page.email or page.tel %}
+        <li>Contact : {{ page.email }} {% if page.email and page.tel %} - {% endif %}{{ page.tel }}</li>
         {% endif %}
-        {% if  page.responsable %}
+        {% if page.responsable %}
         <li>référent·e{% if page.responsable contains "," %}·s{% endif %} : {{ page.responsable }}</li>
         {% endif %}
-        {% if  page.transport %}
+        {% if page.transport %}
         <li>Transport : {{ page.transport }}</li>
         {% endif %}
-        {% if  page.site %}
+        {% if page.site %}
         <li>Site : <a href="{{ page.site }}">{{ page.site }}</a></li>
-        {% endif %}
-        {% if page.horaires %}
-        {%- include timesWindow.html -%}
         {% endif %}
     </ul>
 </div>
