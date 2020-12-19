@@ -5,9 +5,9 @@ layout: default
 {%- include aside.html -%}
 <article class="blobContent" data-title="content">
   <p>
-    <a href="/{{ communes.page.collection }}">
+    <a href="/{{ page.collection }}">
       autre association à
-      {{ communes.page.collection | capitalize }}</a>
+      {{ page.collection | capitalize }}</a>
   </p>
   <h1>{{ page.nom }}</h1>
   {%- include location-metas.html -%}
